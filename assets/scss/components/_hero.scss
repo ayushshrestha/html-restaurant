@@ -1,0 +1,17 @@
+
+
+
+.slick-slide {
+    position: relative;
+}
+
+.captions {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+
+    span {
+        font-size: 12px;
+        display: block;
+    }
+}

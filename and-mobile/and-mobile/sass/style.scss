@@ -1,0 +1,951 @@
+
+@import '_variable', '_default';
+
+//Menu
+body{
+  padding: 50px 0;
+}
+.header-section{
+  box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.16);
+}
+.main-nav {
+  background: $white;
+  position: fixed;
+  bottom: -1px;
+  z-index: 5;
+  width: 100%;
+  left: 0;
+  box-shadow:  0 -5px 8px rgba($color: #000000, $alpha: 0.16);
+  ul.nav{
+      li{
+        text-align: center;
+        width: 20%;
+        a{
+          display: block;
+          padding:15px 20px;
+        }
+        svg{
+          font-size: 1.5em;
+          fill: $grey !important;
+          position: relative;
+          z-index: 0;
+          top: -40px;
+        }
+        &.active{
+          svg{
+            fill: $themecolor !important;
+          }
+        }
+      }
+    }
+}
+.ripplelink{
+  position:relative;
+  overflow:hidden;
+  transition: all 0.2s ease;
+  z-index:2;
+  display: block;
+  height: 100%;
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  background:rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  transform:scale(0);
+  z-index: 2;
+}
+
+.animate {
+  animation:ripple 0.65s linear;
+}
+@keyframes ripple {
+  100% {opacity: 0; transform: scale(2.5);}
+}
+
+
+
+.main-tab-nav{
+  padding: 10px 15px ;
+  background: #ffffff;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  &.s-shadow{
+    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.16);
+  }
+ 
+  .swiper-wrapper{
+    display: flex;
+    justify-content: space-between;
+    .swiper-slide{
+      font-size: 22px;
+      width: auto !important;
+      font-weight: 800;
+      width: auto !important;
+      position: relative;
+         &:before{
+        position: absolute;
+          content: "";
+          height: 2px;
+          width: 0;
+          background: $themecolor;
+          left: 0;
+          bottom: 0px;
+          transition: $transition;
+      }
+      &.swiper-slide-thumb-active{
+        color: $themecolor;
+        position: relative;
+        &:before{
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+}
+.large-news-wrapper{
+  padding-top: 15px;
+}
+// Large News
+.large-news{
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  .news-img{
+    a{
+      height: 270px;
+    }
+  }
+
+}
+// Thumbnail view
+.thumbnail-news{
+  background: $lgrey;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: inset 0px 11px 8px -10px #CCC, inset 0px -11px 8px -10px #CCC;
+  .col-md-6{
+    margin-bottom: 10px;
+  }
+  article{
+    background: $white;
+    border-radius:10px;
+    display: flex;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16);
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .news-img{
+      margin-right: 10px;
+      margin-bottom: 0;
+      a{
+        height: 125px;
+        width: 125px;
+        border-radius: 0;
+      }
+    }
+    .news-content{
+      padding: 10px 10px 10px 0;
+      h3{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+    }
+    
+  }
+}
+// responsive
+@media only screen and (min-width: 668px) {
+  body{
+    padding: 60px 0;
+  }
+  .thumbnail-news{
+    padding: 0;
+    background: $white;
+    box-shadow: none;
+    .col-md-6{
+      margin-bottom: 20px;
+      article{
+        box-shadow: none;
+        border: $bordertheme;
+      }
+    }
+  }
+
+ 
+}
+// small News
+.small-news-section{
+  padding-top: 15px;
+  .row{
+    .col-6{
+      border-left: $bordertheme;
+      margin-bottom: 15px;
+      &:first-child{
+        border-left: 0;
+      }
+    }
+  }
+}
+.small-news{
+  
+  .news-img{
+    margin-bottom: 10px;
+    a{
+      height: 130px;
+    }
+  }
+  h3{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+}
+// List View
+.list-news{
+  border-top: $bordertheme;
+  padding-top: 15px;
+  article{
+    margin-bottom: 20px;
+    .news-img{
+      margin-bottom: 10px;
+      a{
+        height: 200px;
+      }
+    }
+  }
+}
+.category-list{
+  ul{
+    padding-top: 5px;
+    li{
+      width: 100%;
+      padding: 10px 0;
+      border-top: $bordertheme;
+      a{
+        font-size: 24px;
+        display: block;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          font-size: 12px;
+          color: rgba($color: #000000, $alpha: 0.3);
+        }
+      }
+    }
+  }
+}
+
+// Footer section
+.footer{
+  margin-top: 20px;
+  border-top: $bordertheme;
+  .top-foter{
+    padding: 20px 0;
+    border-bottom: $bordertheme;
+    .footer-logo{
+      text-align: center;
+    }
+    .social-links{
+      text-align: center;
+      padding-top: 15px;
+      span{
+        display: inline-block;
+      }
+      ul{
+        display: inline-block;
+        li{
+          margin-left: 5px;
+          a{
+            width: 28px;
+            height: 28px;
+            background: #F5F5F5;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            line-height: 28px;
+            svg{
+              fill: $grey !important;
+            }
+            &:hover{
+              background: $themecolor;
+              svg{
+                fill: $white !important;
+                transition: $transition;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Bottom footer
+  .footer-bottom{
+    padding:10px 0;
+    text-align: center;
+    .footer-menu{
+      margin-bottom: 15px;
+      ul{
+        li{
+          margin-right: 10px;
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// login page
+.login-page{
+  padding-top: 40px;
+}
+.login-section{
+  .login-header{
+    margin-bottom: 30px;
+    h2{
+      margin-bottom: 5px;
+      font-size: 32px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  .login-form{
+    input{
+      height: 45px;
+      border-radius: 0;
+    }
+    .form-group{
+      margin-bottom: 20px;
+      
+      .forgot-pw{
+        font-size: 14px;
+        margin-top: 10px;
+        display: block;
+        text-align: right;
+      }
+    }
+    button{
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      height: 45px;
+    }
+    .show_hide_password{
+      position: relative;
+      .input-group-addon{
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        button{
+          display: block;
+          svg{
+            fill:rgba($color: #000000, $alpha: 0.5);
+          }
+        }
+      }
+    }
+  }
+  .social-login{
+    p{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    button{
+      border: none;
+      color:$white;
+      display: block;
+      padding: 10px;
+      width: 100%;
+      position: relative;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      overflow: hidden;
+      &.google-btn{
+        
+        background: $google-color;
+      }
+      &.facebook-btn{
+        background: $facebook-color;
+      }
+      &.twitter-btn{
+        background: $twitter-color;
+      }
+      svg{
+        fill: $white;
+        float: left;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+      
+    }
+    .sign-up-btn{
+      color: $themecolor;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
+  
+}
+
+// Select Category List
+body.select-cat-body{
+  padding: 0;
+}
+.logo-section{
+  border-bottom: $bordertheme;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  z-index: 55;
+  .logo{
+    h1{
+      margin-bottom: 10px;
+    }
+  }
+  &.s-shadow{
+    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.16);
+  }
+  
+  h3{
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.select-category{
+  padding-top: 80px;
+  .cat-heading{
+    h2{
+      margin-bottom: 10px;
+    }
+  }
+  .select-cat{
+    padding-bottom: 65px;
+    ul{
+      margin-top: 30px;
+    }
+    .form-check-inline {
+      margin: 0 5px 10px 0;
+    }
+    
+    [type="checkbox"] {
+      display: none;
+    }
+    
+    .form-check-label {
+      transition: all 144ms ease-in-out;
+      
+      &:hover {
+        color: $white;
+      }
+      
+      &::before {
+        display: inline-block;
+        margin-right: 2px;
+        transition: transform 144ms ease-in-out;
+      }
+    }
+    
+    [type="checkbox"]:not(:checked) + .form-check-label{
+      background-color: transparent;
+      color: $black;
+      border-color: #F0F0F0;
+      border-radius:27px;
+      padding: 5px 15px;
+    }
+    .btn-select{
+      background: $themecolor;
+      padding: 5px 15px;
+    }
+   
+    
+  }
+  .bodal-buttons{
+    position: fixed;
+    bottom: 0px;
+    z-index: 55;
+    width: 100%;
+    padding: 10px 10px 15px 10px;
+    left: 0;
+    background-color: $white;
+    border-top: $bordertheme;
+    button{
+      width: 100%;
+      &.disable{
+        background: $grey;
+        border-color: $grey;
+        opacity: 0.5;
+        pointer-events:none;
+      }
+    }
+    
+  }
+}
+
+//Horoscope Page
+.horoscope-section{
+  .horoscope-title{
+    margin-bottom: 20px;
+    h2{
+      margin-bottom: 10px;
+      }
+  }
+  .horoscope-containt{
+    margin-top: 20px;
+    padding: 30px;
+    .sign-img{
+      background: $themecolor;
+      width: 85px;
+      height: 85px;
+      border-radius: 100px;
+      margin: 0 auto 20px;
+      line-height: 85px;
+      img{
+        width:70%;
+      }
+    }
+    .date{
+      font-size: 14px;
+      color: rgba($color: $grey, $alpha: 0.6);
+    }
+  }
+  .horoscopes-list{
+    .sign{
+      border: $bordertheme;
+      padding: 10px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      .sign-img{
+        margin: 0 auto;
+        background: $themecolor;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        img{
+          width: 70%;
+        }
+      }
+      h4{
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight:400;
+      }
+      &:hover{
+        border-color: $themecolor;
+        transition: $transition;
+      }
+    }
+  }
+}
+
+.horoscopes-list{
+  padding: 0 10px;
+  .row{
+    .col-md-3{
+      padding-left: 5px;
+      padding-right:5px;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .horoscope-section{
+    .horoscopes-list{
+      .sign{
+        h4{
+          font-size: 16px;
+          font-weight: 600;
+        }
+        
+      }
+    }
+  }
+}
+#sign-horoscope{
+  .modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+  }
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+// Search Page
+.search-section{
+  position: fixed;
+  width: 100%;
+  top: 57px;
+  left: 0;
+  background: $white;
+  z-index: 56;
+  padding-top: 10px;
+  .search-form{
+    position: relative;
+    .form-group{
+      input{
+        background: rgba($color: $lgrey, $alpha: 1);
+        border: none;
+      }
+    }
+    .search-btn{
+      border: none;
+      background: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      svg{
+        fill: $grey;
+      }
+    }
+  }
+  
+ 
+}
+.suggestion-section{
+    padding-top:85px;
+    .suggestion-news{
+      margin-bottom: 30px;
+      h4{
+        margin-bottom: 10px;
+      }
+      ul{
+        li{
+          width: 100%;
+          padding: 5px 0;
+          border-top: $bordertheme;
+          &:last-child{
+            border-bottom: $bordertheme;
+          }
+          a{
+            display: block;
+          }
+        }
+      }
+    }
+}
+.search-result{
+  .result-heading{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 128px;
+    left: 0;
+    width: 100%;
+    background: $white;
+    z-index: 10;
+    span{
+      color: rgba($color: $grey, $alpha: 0.6);
+    }
+    &.s-shadow{
+      box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.16);
+    }
+    
+  }
+  .result-content{
+    margin-top: 125px;
+    padding-bottom: 20px;
+    .thumbnail-news{
+      padding: 0;
+      background: $white;
+      box-shadow: none;
+      article{
+        box-shadow: none;
+        border: $bordertheme;
+      }
+    }
+  }
+}
+// Profile page
+.profile-section{
+  .profile-heading{
+    padding: 10px;
+    .profile-image{
+      margin: 0 auto;
+      img{
+        border-radius: 50px;
+        width:65px;
+        height: 65px;
+      }
+      
+    }
+  }
+  
+  .profile-title{
+    text-align:center;
+    padding-bottom: 10px;
+    border-bottom: $bordertheme;
+    h2{
+      margin-bottom: 0;
+    }
+    span{
+      color:rgba($color: $grey, $alpha: 0.6);
+    }
+  }
+  .profile-menu{
+    ul{
+      li{
+        width: 100%;
+        padding: 10px 0;
+        border-bottom:$bordertheme;
+        a{
+          svg{
+            margin-right:5px;
+          }
+        }
+      }
+    }
+  }
+    .profile-setting{
+      
+      .preferences{
+          max-width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        .modal-content{
+          padding: 30px 0;
+          height: auto;
+          min-height: 100%;
+          border-radius: 0;
+          .modal-title{
+            h2{
+              margin-bottom: 10px;
+            }
+          }
+          ul{
+            li{
+              width:auto;
+              border:none;
+              padding: 0;
+            }
+          }
+          .bodal-buttons{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            background: #fff;
+            padding: 10px;
+            border-top: $bordertheme;
+            button{
+              width:45%;
+            }
+          }
+        }
+        
+        .form-check-inline {
+          margin: 0 5px 10px 0;
+        }
+        
+        [type="checkbox"] {
+          display: none;
+        }
+        
+        .form-check-label {
+          transition: all 144ms ease-in-out;
+          
+          &:hover {
+            color: $white;
+          }
+          
+          &::before {
+            display: inline-block;
+            margin-right: 2px;
+            transition: transform 144ms ease-in-out;
+          }
+        }
+        
+        [type="checkbox"]:not(:checked) + .form-check-label{
+          background-color: transparent;
+          color: $black;
+          border-color: #F0F0F0;
+          border-radius:27px;
+          padding: 5px 15px;
+        }
+        .btn-select{
+          background: $themecolor;
+          padding: 5px 15px;
+        }
+        .form-group{
+          position: relative;
+        }
+        .input-group-addon{
+          position: absolute;
+          right: 10px;
+          bottom: 12px;
+          a{
+            svg{
+              fill:rgba($color: $grey, $alpha: 0.6)
+            }
+           
+          }
+        }
+        
+       
+        
+      }
+    }
+  
+}
+
+// publisher page
+
+  .news-site-inner{
+    background:$white;
+    padding:20px;
+    border: $bordertheme;
+    border-radius:10px;
+    .site-logo{
+      img{
+        max-height: 50px;
+      max-width: 100%;
+      margin-bottom: 10px;
+      }
+    }
+    .news-site-content{
+      h2{
+        font-size: 18px;
+        margin-bottom: 10p;
+      }
+      .site-link{
+        margin-bottom: 10px;
+        background:$grey;
+        padding:3px 10px;
+        color:$white;
+        font-size: 14px;
+        border-radius:3px;
+        display: inline-block;
+      }
+      p{
+        margin-bottom: 20px;
+      }
+      .social-links{
+        li{
+          a{
+            width: 28px;
+            height: 28px;
+            background: #F5F5F5;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 5px;
+            font-size:14px;
+            svg{
+              fill:$grey;
+            }
+            &:hover{
+              background: $themecolor;
+              transition: $transition;
+              svg{
+                fill:$white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // inner title
+  .inner-title{
+    border-bottom: $bordertheme;
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white;
+    z-index: 55;
+    padding:15px 0;
+    
+    &.s-shadow{
+      box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.16);
+    }
+    .back{
+      position: absolute;
+      left: 16px;
+      top: 10px;
+      a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      line-height: 33px;
+      text-align: center;
+      border-radius: 50px;
+      }
+      svg{
+        fill:$black;
+        font-size:22px;
+        position: absolute;
+        z-index: 0;
+        left: 7px;
+        bottom: 15px;
+      }
+    }
+    h3{
+      margin-bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 667px) {
+    .horoscope-section{
+      .horoscopes-list{
+        .sign{
+          .sign-img{
+            width: 100px;
+            height: 100px;
+          }
+          h4 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        }
+      }
+    }
+   
+  }
+
+  .skip-btn{
+    position: absolute;
+    right: 20px;
+    top: -30px;
+    a{
+      text-decoration: underline;
+      font-size: 14px;
+    }
+  }

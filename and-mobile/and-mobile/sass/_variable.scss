@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+// color
+$lgrey:#F0F0F0;
+$grey:#5c5d5f;
+$white:#fff;
+$bgrey:#4C4C4C;
+$black:#121213;
+$fullblack:#000000;
+$themecolor:#FF1D50;
+$themecolor1:#C31E24;
+$hovercolor:#292929;
+$transparent: rgba(0, 0, 0, 0);
+$green: #28a745;
+$google-color:#EA4335;
+$facebook-color:#4267B2;
+$twitter-color:#55ADEE;
+
+// font-styling
+
+$fontfamily-body:'Roboto', sans-serif;
+$fontfamily-heading:'Roboto', sans-serif;
+$fonticon: 'fontawesome';
+$fontbold:700;
+$fontmiddle:500;
+$fontnormal:400;
+$fontlineheight:1.5;
+$fontitalic:italic;
+$textupper:uppercase;
+$textcap:capitalize;
+
+
+$transition:all ease-in-out 0.5s;
+$size100: 100%;
+
+// border
+$bordertheme:1px solid $lgrey;
+$bordertheme1:1px solid $themecolor1;
+$borderall:1px solid #E3E3E3;
+$borderdashed:1px dashed $grey;
+
+$box-shadow:0 5px 8px rgba(0, 0, 0, 0.15);
+$big-shadow:0 3px 15px rgba(0, 0, 0, 0.15);
+$btn-shadow:0 3px 6px rgba(0, 0, 0, 0.16);

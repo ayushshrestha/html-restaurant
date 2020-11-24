@@ -1,0 +1,96 @@
+
+body {
+    font-family: $font-body;
+    font-weight: $font-normal;
+    overflow-x: hidden;
+}
+
+p::-moz-selection{
+    background-color:$default;
+    color:$white;
+}
+p::selection{
+    background-color:$default;
+    color:$white;
+}
+::-moz-selection{
+    background-color:$default;
+    color:$white;
+}
+::selection{
+    background-color:$default;
+    color:$white;
+}
+
+
+.border-radius-10 {
+    border-radius: 10px;
+    overflow:hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+h5, .h5 {
+    font-size: 0.8rem;
+}
+
+
+// .container-fluid {
+    
+//     padding: 0 15px;
+// }
+
+
+
+.slick-center {
+    .slick-list {
+        // padding: 0 50px 0 0 !important;
+    }
+    .slick-slide{
+        margin:0 20px 0 0 !important;
+    }
+}
+
+.card-body {
+    padding: 15px;
+}
+
+
+
+.block-search {
+    position: relative;
+    input {
+        border-radius: 50px;
+        border:none;
+        padding: 10px 15px;
+        width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+    button.btn-search {
+        position: absolute;
+        right:5px;
+        top:0;
+        z-index: 10;
+        border:none;
+        width: 40px;
+        height: 100%;
+        text-indent: -99999px;
+        background:url(../images/icon/svg/search.svg) center center no-repeat;
+        &:focus {
+            outline: none;
+        }
+    }
+}

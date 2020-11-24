@@ -1,0 +1,137 @@
+
+.bg {
+    &-default {
+        background-color: $default;
+        color: $white;
+    }
+    &-primary {
+        background-color: $primary;
+    }
+    &-secondary {
+        background-color: $secondary;
+    }
+    
+    &-white {
+        &-transparent {
+            background-color: rgba(255,255,255,0.9);       
+        }
+    }
+    &-black {
+        &-transparent {
+            background-color: rgba(0,0,0,0.4);       
+        }
+        &-gradient {
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+        }
+    }
+    &-dark-purple {
+        background-color: $darkpurple;
+    }
+}
+// bg color ends 
+
+// text color begins 
+
+.text {
+    &-default {
+        color: $default !important;
+    }
+    &-primary {
+        color: $primary !important;
+    }
+    &-white {
+        // color: $white !important;
+    }
+}
+
+.color {
+    &-default {
+        color: $default !important;
+    }
+}
+
+// text color ends
+
+
+
+body.theme {
+    &-light {
+     h1, h2, h3, h4, h5 {
+        color: $grey !important;
+     }       
+
+    }
+    &-dark {
+        background-color: $black;
+        a, h2, h3, h4, h5, h6, p {
+            color: $white;
+        }
+
+
+        nav a {
+            &:hover, &.active {
+                text-decoration: none;
+                background-color: $primary;
+            } // nav active
+        }
+        
+        .captions {
+            color: $white;
+        }
+
+        /* slick dots start */
+        .slick-dots {
+            bottom:-35px;
+            
+            li {
+                width:10px;
+                height: 10px;
+                border:solid 1px $primary;
+                border-radius: 50px;
+                overflow: hidden;
+                button {
+                }
+                &.slick-active button{
+                    background-color: $primary;
+                } // slick active button
+            } // slick dots li 
+        } 
+        /* slick dots end */
+
+        .theme-dashed-border {
+            background-color: transparent;
+            background-color: rgba(255,255,255,0.07);
+            // border:dashed 1px #F6F6F6;
+            .list-menu {
+                margin:0;
+                padding:0;
+                padding: 15px;
+                border-radius: 5px;
+                border:dashed 1px #F6F6F6;
+                li {
+                    list-style: none;
+                    border:none;
+                    &:not(:first-child){
+                    margin-top: 15px;
+                    padding-top:15px;
+                    border-top:dashed 1px #F6F6F6;
+                    }
+                }
+            }
+            
+        } /* theme dotted border css */
+
+    }    /* dark theme css */
+}
+
+.theme-light {
+    
+    h1, h2, h3, h4, h5, p {
+        color: $grey !important;
+     }   
+
+    .text-muted {
+        opacity: 0.5;
+    }
+}
