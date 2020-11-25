@@ -12,3 +12,10 @@
         // font-size: 1rem;
     }
 }
+
+
+.list-menu {
+    &_title {
+        border-bottom:solid 1px $white;
+    }
+}

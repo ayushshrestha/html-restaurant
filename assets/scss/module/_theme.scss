@@ -1,5 +1,8 @@
 
 .bg {
+    &-transparent {
+        background: transparent;
+    }
     &-default {
         background-color: $default;
         color: $white;
@@ -91,8 +94,6 @@ body.theme {
                 border:solid 1px $primary;
                 border-radius: 50px;
                 overflow: hidden;
-                button {
-                }
                 &.slick-active button{
                     background-color: $primary;
                 } // slick active button
@@ -114,9 +115,9 @@ body.theme {
                     list-style: none;
                     border:none;
                     &:not(:first-child){
-                    margin-top: 15px;
-                    padding-top:15px;
-                    border-top:dashed 1px #F6F6F6;
+                        margin-top: 15px;
+                        padding-top:15px;
+                        border-top:dashed 1px #F6F6F6;
                     }
                 }
             }
