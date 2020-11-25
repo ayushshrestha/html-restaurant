@@ -1,18 +1,20 @@
 @import 'vendor/bootstrap/bootstrap';
-@import 'vendor/slick/slick';
-@import 'vendor/animate.min';
+@import 'vendor/swiper/swiper-bundle.min';
+// @import 'vendor/animate.min';
 @import 'vendor/jquery.mCustomScrollbar';
 // @import 'vendor/fontawesome/fontawesome.min';
 @import 'variables';
 
-@import 'module/button';
+// @import 'module/button';
 @import 'module/image';
 @import 'module/theme';
 @import 'module/font';
-@import 'module/icon';
+@import 'module/card';
 @import 'module/menu';
-
 @import 'module/alert';
+@import 'module/swiper';
+
+@import 'module/modal-detail';
 
 @import 'components/hero';
 @import 'components/common';
