@@ -17,6 +17,7 @@
         }
     }
     &-black {
+            background-color: $black;    
         &-transparent {
             background-color: rgba(0,0,0,0.4);       
         }
@@ -101,9 +102,9 @@ body.theme {
 
         .theme-dashed-border {
             background-color: transparent;
-            background-color: rgba(255,255,255,0.07);
             // border:dashed 1px #F6F6F6;
             .list-menu {
+                background-color: rgba(255,255,255,0.07);
                 margin:0;
                 padding:0;
                 padding: 15px;
@@ -119,7 +120,9 @@ body.theme {
                     }
                 }
             }
-            
+            .border-dashed-left {
+                border-left:dashed 1px #F6F6F6;
+            }
         } /* theme dotted border css */
 
     }    /* dark theme css */

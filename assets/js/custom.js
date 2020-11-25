@@ -1,39 +1,3 @@
-$(document).ready(function(){
-    // var headerInfo = $('.masthead-info').outerHeight();
-    // alert(headerInfo);
-
-    // $('.hero-agrimove').css('margin-top', headerInfo);
-    // $('.hero-agrimove').css('height', headerInfo);
-
-    $('.slick-default').slick({
-        lazyLoad: 'ondemand',
-        slidesToShow: 1,
-        arrows: false,
-        dots:true,
-        slidesToScroll: 1
-    });
-
-    $('.slick-center').slick({
-        dots: true,
-        infinite: true,
-        speed: 1200,
-        arrows: false,
-        slidesToShow: 1,
-        variableWidth: true
-    });
-
-    new WOW().init();
-
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        offset: 112
-    });
-
-
-    // $(".alert").alert('close');
-
-
-});
-
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("menu");
@@ -46,3 +10,38 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+/* swiper stars from here */
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+}) 
+/* swiper ends here */
+
+/* swiper 1 1/2 starts from here */
+var mySwiper = new Swiper('.swiper-container-1-1by2', {
+  // Optional parameters
+  slidesPerView: 'auto',
+      spaceBetween: 20,
+}) 
+/* swiper 1 1/2 ends here */
+
+// $('.modal').modal('show'); 
+
+$('.modal').on('shown.bs.modal', function (e) {
+  $('.slick-default').slick('setPosition');
+  $('.slick-default').addClass('open');
+})
+
+
+
