@@ -14,7 +14,7 @@
 
 <body class="theme-dark">
   <header class="mt-3">
-    <h1 class="mx-auto text-center mb-4"><a href=""><img src="/assets/images/logo.png"></a></h1>
+    <h1 class="mx-auto text-center mb-4"><a href=""><img src="assets/images/logo.png"></a></h1>
   </header> <!-- header ends -->
   
   <div id="menu">
@@ -36,7 +36,7 @@
     </div>
 
     <!-- Slider main container -->
-    <div class="swiper-container">
+    <div class="hero-slider">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
           <!-- Slides -->
@@ -125,7 +125,7 @@
       <h3 class="mb-3 col-12">Popular foods</h3>
       <!-- Modal Product Detail start here -->
       <div class="modal fade" id="detailProduct" tabindex="-1" role="dialog" aria-labelledby="detailProduct" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog" role="document">
           <div class="modal-content  bg-black">
             <div class="modal-header border-radius-0">
               <h3 id="detailProduct" class="mb-0">Beer Battered fish & chips</h3>
@@ -134,18 +134,16 @@
               </button>
             </div>
             <div class="modal-body pb-4">
-              <div class="image border-radius-10 ">
-                <figure>
-                  <a href="" data-toggle="modal" data-target="#detailProduct"><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
-                </figure>
-              </div>
-              <div class="slick-default mb-5">
-                <div class=" border-radius-10 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"> <span class="captions">15% OFF <span>Mixed Pizza</span></span></div>
-                <div class=" border-radius-10 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
-                <div class=" border-radius-10 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
-                <div class=" border-radius-10 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
-                <div class=" border-radius-10 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
-              </div>
+              <div class="details-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide  border-radius-5"><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
+                  <div class="swiper-slide  border-radius-5 "><img src="assets/images/hero/hero-2.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
+                  <div class="swiper-slide  border-radius-5 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
+                  <div class="swiper-slide  border-radius-5"><img src="assets/images/hero/hero-3.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
+                  <div class="swiper-slide  border-radius-5 "><img src="assets/images/hero/hero-1.jpg" data-lazy="img/lazyfonz1.png" class="img-fluid"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
               <h4 class="pt-4">Beer Battered fish & chips</h4>
               <p class="mb-0 float-left">Rs. <span class="text-primary">550.00</span></p>
               <p class="mb-0 float-right text-muted"><s>Rs. 550.00</s></p>
@@ -157,7 +155,7 @@
       </div> 
       <!-- Modal Product Detail ends here -->
       <!-- Slider main container -->
-      <div class="swiper-container swiper-container-1-1by2 theme-light">
+      <div class="popular-food swiper-container swiper-container-1-1by2 pl-3 theme-light">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
@@ -166,7 +164,7 @@
                 <div class="card border-0">
                   <div class="image">
                     <figure>
-                      <a href="" data-toggle="modal" data-target="#exampleModal"><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
+                      <a href="" data-toggle="modal" data-target="#detailProduct"><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
                     </figure>
                   </div>
                   <div class="card-body">
@@ -215,44 +213,45 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <section class="row pt-4">
-      <div class="col-12">
-        <h3 class="mb-3">Popular Drinks</h3>
-      </div>
-      <div class="col-6 theme-light">
-        <div class=" border-radius-10 ">
-          <div class="card border-0">
-            <div class="image">
-              <figure>
-                <a href=""><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
-              </figure>
-            </div>
-            <div class="card-body">
-              <h4>Beer Battered fish & chips</h4>
-              <p class="mb-0 float-left">Rs. <span class="text-primary">550.00</span></p>
-              <p class="mb-0 float-right text-muted"><s>Rs. 550.00</s></p>
-            </div>
-          </div>
+    <section class="container pt-4">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="mb-3">Popular Drinks</h3>
         </div>
-      </div>  
-      <div class="col-6 theme-light">
-        <div class=" border-radius-10 ">
-          <div class="card border-0">
-            <div class="image">
-              <figure>
-                <a href=""><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
-              </figure>
-            </div>
-            <div class="card-body">
-              <h4>Beer Battered fish & chips</h4>
-              <p class="mb-0 float-left">Rs. <span class="text-primary">550.00</span></p>
-              <p class="mb-0 float-right text-muted"><s>Rs. 550.00</s></p>
+        <div class="col-6 theme-light">
+          <div class=" border-radius-10 ">
+            <div class="card border-0">
+              <div class="image">
+                <figure>
+                  <a href=""><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
+                </figure>
+              </div>
+              <div class="card-body">
+                <h4>Beer Battered fish & chips</h4>
+                <p class="mb-0 float-left">Rs. <span class="text-primary">550.00</span></p>
+                <p class="mb-0 float-right text-muted"><s>Rs. 550.00</s></p>
+              </div>
             </div>
           </div>
-        </div> <!-- slick item ends -->
-      </div>  
+        </div>  
+        <div class="col-6 theme-light">
+          <div class=" border-radius-10 ">
+            <div class="card border-0">
+              <div class="image">
+                <figure>
+                  <a href=""><img class="card-img-top" src="assets/images/hero/hero-1.jpg" alt="Card image cap"></a>
+                </figure>
+              </div>
+              <div class="card-body">
+                <h4>Beer Battered fish & chips</h4>
+                <p class="mb-0 float-left">Rs. <span class="text-primary">550.00</span></p>
+                <p class="mb-0 float-right text-muted"><s>Rs. 550.00</s></p>
+              </div>
+            </div>
+          </div> <!-- slick item ends -->
+        </div>  
+      </div>
     </section>
-  
   </div>  
   
   <footer class="section-contactus py-5 text-center">

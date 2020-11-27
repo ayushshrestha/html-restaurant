@@ -139,3 +139,58 @@ body.theme {
         opacity: 0.5;
     }
 }
+
+.category-tab-content .swiper-slide {
+    min-height: calc(100vh - 75px);
+}
+.category-tab-content .hero-slider {
+    overflow: hidden;
+    .swiper-wrapper{
+        
+        .swiper-slide {
+            min-height: auto;
+        }
+    }
+}
+
+// product-details
+.details-slider{
+    .swiper-slide {
+        height: 175px;
+        .img-fluid{
+            max-width: none;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.popular-food .card .card-body {
+    min-height: 105px;
+}
+.featured-product{
+    .swiper-slide {
+        .border-radius-10 {
+            height: 175px;
+        .img-fluid{
+            max-width: none;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        }
+    }
+}
+.side-images{
+    margin-top: 35px;
+}
+.category-tab-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 555;
+    top: 0;
+    left: 0;
+}
+.category-content{
+    margin-top: 80px;
+}
