@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="143" height="30" viewBox="0 0 143 30">
-  <g id="menu-logo" transform="translate(-97.063 -18)">
-    <g id="Group_1" data-name="Group 1" transform="translate(131.063 21)">
-      <text id="Hamro_News" data-name="Hamro News" transform="translate(0 18)" fill="#121213" font-size="17" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Hamro News</tspan></text>
-    </g>
-    <circle id="Ellipse_1" data-name="Ellipse 1" cx="15" cy="15" r="15" transform="translate(97.063 18)" fill="#ff1d50"/>
-    <text id="HN" transform="translate(100.063 39)" fill="#fff" font-size="15" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">HN</tspan></text>
-  </g>
-</svg>

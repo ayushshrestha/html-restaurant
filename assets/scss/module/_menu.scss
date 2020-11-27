@@ -92,5 +92,12 @@
             display: none;
             padding-right: 10px;
         }
+        &-thumb-active{
+            background-color: $primary;
+            color: $white;
+            .icon-menu {
+                display: inline-block;
+            }
+        }
     }
 }
